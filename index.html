@@ -327,7 +327,7 @@
             Contact Us
           </h2>
 
-          <form class="contact-form">
+          <form class="contact-form" id="contactForm">
 
             <div class="form-group">
               <label for="email">Email address</label>
@@ -353,6 +353,13 @@
             <button type="submit" class="contact-button">
               Submit →
             </button>
+
+            <p class="form-notice" id="formNotice" role="status">
+              <strong>Form temporarily unavailable.</strong>
+                We’re finishing a few updates to this contact form. For now, please email us directly at
+                <a href="mailto:inquiries@smalife-analytics.com">inquiries@smalife-analytics.com</a>
+                and we’ll get back to you soon.
+            </p>
 
           </form>
 
@@ -389,6 +396,37 @@
     </section>
 
   </footer>
+
+  <div class="form-modal" id="formModal">
+  <div class="form-modal-box">
+    <button class="form-modal-close" id="closeFormModal" aria-label="Close message">
+      ×
+    </button>
+
+    <h3>Contact form temporarily unavailable</h3>
+
+    <p>
+      We’re finishing a few updates to this contact form. Your message has not been sent.
+      For now, please email us directly at
+      <a href="mailto:inquiries@smalife-analytics.com">inquiries@smalife-analytics.com</a>.
+    </p>
+  </div>
+</div>
+
+<script>
+  const contactForm = document.getElementById("contactForm");
+  const formModal = document.getElementById("formModal");
+  const closeFormModal = document.getElementById("closeFormModal");
+
+  contactForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    formModal.classList.add("show");
+  });
+
+  closeFormModal.addEventListener("click", function() {
+    formModal.classList.remove("show");
+  });
+</script>
 
 </body>
 </html>

@@ -654,3 +654,79 @@ se apliquen otra vez*/
 .hero {
 display: none;
 }
+
+.form-notice {
+  display: none;
+
+  margin-top: 24px;
+  padding: 18px 20px;
+
+  border: 1px solid rgba(201, 222, 157, 0.45);
+  border-radius: 14px;
+
+  background: rgba(201, 222, 157, 0.12);
+  color: #fafbf6;
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.form-notice a {
+  color: #c9de9d;
+  font-weight: 600;
+}
+
+.form-notice.show {
+  display: block;
+}
+
+.form-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(5, 12, 7, 0.72);
+  z-index: 9999;
+}
+
+.form-modal.show {
+  display: flex;
+}
+
+.form-modal-box {
+  position: relative;
+  max-width: 520px;
+  background: #fafbf6;
+  color: #214a25;
+  border-radius: 18px;
+  padding: 34px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+}
+
+.form-modal-box h3 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+}
+
+.form-modal-box p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.form-modal-box a {
+  color: #214a25;
+  font-weight: 700;
+}
+
+.form-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: none;
+  background: transparent;
+  color: #214a25;
+  font-size: 2rem;
+  cursor: pointer;
+}
